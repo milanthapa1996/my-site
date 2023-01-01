@@ -5,7 +5,7 @@ import Link from "next/link";
 
 function Navbar() {
   return (
-    <nav className="sticky top-0 z-[100] p-4 flex justify-between items-center">
+    <nav className="sticky top-0 left-0 z-[500] bg-gray-50 p-4 flex justify-between items-center">
       <div className="lg:hidden">
         <svg
           className="w-8 h-8 cursor-pointer hover:scale-105 duration-500"
