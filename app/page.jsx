@@ -1,9 +1,11 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 import heroImg from "../public/myPic.png";
 
-
 export default function Home() {
+  const [darkMode, setDarkMode] = useState(false);
+
   const SocialMediaLinks = [
     {
       name: "Faceboo",
@@ -37,6 +39,9 @@ export default function Home() {
     },
   ];
 
+  const handleTheme = () => {
+    setDarkMode(!darkMode);
+  };
   return (
     <main className="flex flex-col lg:flex-row items-center justify-center">
       <div className="w-full lg:w-[50%] h-screen text-white">
@@ -69,8 +74,12 @@ export default function Home() {
             ))}
           </div>
           <div className="mt-12 space-x-4 flex justify-center items-center">
-            <button className="bg-black py-3 px-3 rounded-md cursor-pointer tracking-wider font-bold hover:bg-black/80 hover:scale-105 duration-500">Connect With Me</button>
-            <button className="border-2 border-gray-300 text-sky-400 tracking-wider font-bold py-3 px-3 rounded-md cursor-pointer hover:bg-gray-300 hover:scale-105 duration-500">Email Me</button>
+            <button className="bg-black py-3 px-3 rounded-md cursor-pointer tracking-wider font-bold hover:bg-black/80 hover:scale-105 duration-500">
+              Connect With Me
+            </button>
+            <button className="border-2 border-gray-300 text-sky-400 tracking-wider font-bold py-3 px-3 rounded-md cursor-pointer hover:bg-gray-300 hover:scale-105 duration-500">
+              Email Me
+            </button>
           </div>
         </div>
       </div>
@@ -85,6 +94,16 @@ export default function Home() {
             className="rounded-full shadow-lg shadow-cyan-400"
           />
         </div>
+      </div>
+      <div
+        className="fixed top-[50%] right-0 border-2 p-2 border-gray-300 cursor-pointer"
+        onClick={handleTheme}
+      >
+        {!darkMode ? (
+          <Image src="/icons/sun.svg" alt="sun" width={25} height={25}/>
+        ) : (
+          <Image src="/icons/moon.svg" alt="moon" width={25} height={25} />
+        )}
       </div>
     </main>
   );

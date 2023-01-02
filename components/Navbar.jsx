@@ -1,12 +1,16 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 import profilePic from "../public/logo.png";
 import Link from "next/link";
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="sticky top-0 left-0 z-[500] bg-gray-50 p-4 flex justify-between items-center">
-      <div className="lg:hidden">
+    <nav
+      className={`sticky top-0 left-0 z-[500] bg-gray-50 p-4 flex justify-between items-center`}
+    >
+      <div className="block lg:hidden" onClick={() => setIsOpen(!isOpen)}>
         <svg
           className="w-8 h-8 cursor-pointer hover:scale-105 duration-500"
           fill="currentColor"
@@ -68,6 +72,41 @@ function Navbar() {
           </svg>
         </span>
       </div>
+      {/* close button */}
+
+      {isOpen && (
+        <section className="w-full fixed top-0 left-0 h-screen backdrop-blur-sm">
+          <div className="absolute top-0 left-0 w-[60%] h-screen bg-gray-50 z-[400] flex justify-center items-center space-y-6 text-2xl">
+            <div className="flex flex-col justify-center items-center space-y-4">
+              <div className="cursor-pointer tracking-wide hover:scale-105 duration-300 hover:border-b-2 border-sky-400 border-dotted">
+                <Link href="/">Home</Link>
+              </div>
+              <div className="cursor-pointer tracking-wide hover:scale-105 duration-300 hover:border-b-2 border-sky-400 border-dotted ">
+                <Link href="/about">? I Do</Link>
+              </div>
+              <div className="cursor-pointer tracking-wide hover:scale-105 duration-300 hover:border-b-2 border-sky-400 border-dotted">
+                <Link href="/education">Education</Link>
+              </div>
+              <div className="cursor-pointer tracking-wide hover:scale-105 duration-300 hover:border-b-2 border-sky-400 border-dotted">
+                <Link href="/skills">Skills</Link>
+              </div>
+              <div className="cursor-pointer tracking-wide hover:scale-105 duration-300 hover:border-b-2 border-sky-400 border-dotted">
+                <Link href="/contact">Contact</Link>
+              </div>
+
+              <div className="cursor-pointer tracking-wide hover:scale-105 duration-300 hover:border-b-2 border-sky-400 border-dotted">
+                <Link href="/projects">Projects</Link>
+              </div>
+            </div>
+            <div
+              className="absolute top-0 right-0 text-xl text-white bg-black py-2 px-3 cursor-pointer"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              X
+            </div>
+          </div>
+        </section>
+      )}
     </nav>
   );
 }
