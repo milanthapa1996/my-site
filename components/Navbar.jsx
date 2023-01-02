@@ -49,7 +49,7 @@ function Navbar() {
         <span>Resume</span>
         <span>
           <svg
-            className="w-5 h-5 group-hover:scale-110 duration-500 animate-bounce"
+            className="w-5 h-5 group-hover:scale-110 duration-500 animate-pulse"
             fill="currentColor"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
