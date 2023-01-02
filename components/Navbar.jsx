@@ -35,13 +35,19 @@ function Navbar() {
             <Link href="/">Home</Link>
           </li>
           <li className="cursor-pointer tracking-wide hover:scale-105 duration-300 hover:border-b-2 border-sky-400 border-dotted ">
-            <Link href="/about">About</Link>
+            <Link href="/about">? I Do</Link>
           </li>
           <li className="cursor-pointer tracking-wide hover:scale-105 duration-300 hover:border-b-2 border-sky-400 border-dotted">
             <Link href="/education">Education</Link>
           </li>
           <li className="cursor-pointer tracking-wide hover:scale-105 duration-300 hover:border-b-2 border-sky-400 border-dotted">
             <Link href="/skills">Skills</Link>
+          </li>
+          <li className="cursor-pointer tracking-wide hover:scale-105 duration-300 hover:border-b-2 border-sky-400 border-dotted">
+            <Link href="/contact">Contact</Link>
+          </li>
+          <li className="cursor-pointer tracking-wide hover:scale-105 duration-300 hover:border-b-2 border-sky-400 border-dotted">
+            <Link href="/projects">Projects</Link>
           </li>
         </ul>
       </div>

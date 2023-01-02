@@ -39,7 +39,7 @@ const Education = () => {
               </div>
               <h1 className="text-5xl font-bold leading-tight dark:text-white">
                 {" "}
-                My Education <span className="text-blue-500">
+                My Education <span className="text-sky-500">
                   {" "}
                   Timeline
                 </span>{" "}
@@ -58,7 +58,7 @@ const Education = () => {
 
           <ol className="items-center sm:flex h-full">
             {educationList.map((education) => (
-              <li className="relative mb-6 sm:mb-0">
+              <li className="relative mb-6 sm:mb-0" key={education.id}>
                 <div className="flex items-center">
                   <div className="flex z-10 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
                     <svg

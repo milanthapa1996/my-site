@@ -70,7 +70,7 @@ const Skills = () => {
               </div>
               <h1 className="text-5xl font-bold leading-tight dark:text-white">
                 {" "}
-                My <span className="text-blue-500"> Skills</span>{" "}
+                My <span className="text-sky-500"> Skills</span>{" "}
               </h1>
               <div className="flex mt-1 mb-10 overflow-hidden rounded w-14">
                 <div className="flex-1 h-2 bg-blue-200"></div>

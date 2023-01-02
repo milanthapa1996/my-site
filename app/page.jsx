@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import heroImg from "../public/myPic.png";
 
+
 export default function Home() {
   const SocialMediaLinks = [
     {
@@ -68,12 +69,12 @@ export default function Home() {
             ))}
           </div>
           <div className="mt-12 space-x-4 flex justify-center items-center">
-            <button className="bg-black py-3 px-3 rounded-md cursor-pointer tracking-wider font-bold hover:bg-black/80 hover:scale-105 duration-500">Contact Me</button>
-            <button className="border-2 border-gray-300 text-sky-400 tracking-wider font-bold py-3 px-3 rounded-md cursor-pointer hover:bg-gray-300 hover:scale-105 duration-500">Contact Me</button>
+            <button className="bg-black py-3 px-3 rounded-md cursor-pointer tracking-wider font-bold hover:bg-black/80 hover:scale-105 duration-500">Connect With Me</button>
+            <button className="border-2 border-gray-300 text-sky-400 tracking-wider font-bold py-3 px-3 rounded-md cursor-pointer hover:bg-gray-300 hover:scale-105 duration-500">Email Me</button>
           </div>
         </div>
       </div>
-      <div className="w-full lg:w-[50%] h-screen text-white">
+      <div className="w-[90%] lg:w-[50%] h-screen text-white">
         {/* Hero Image */}
         <div className="flex items-center justify-center lg:justify-start h-[95%]">
           <Image
