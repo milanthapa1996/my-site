@@ -52,9 +52,7 @@ const Skills = () => {
             key={index}
             className={`flex flex-col items-center justify-center m-2 p-2 rounded-lg shadow-lg ${
               skill.shadowColor
-            } cursor-pointer hover:scale-105 duration-500 ${
-              index % 2 == 0 ? "animate-bounce" : "animate-pulse"
-            }`}
+            } cursor-pointer hover:scale-105 duration-500`}
           >
             <img src={skill.icon} alt={skill.name} className="w-16 h-16" />
             <span className="text-sm font-semibold text-gray-700 mt-1">
